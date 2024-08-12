@@ -11,4 +11,9 @@ describe(add.name, () => {
     const value = randomInt(10);
     expect(value).toBeLessThan(5);
   });
+
+  it("should not have long running tests", async () => {
+    await new Promise((resolve) => setTimeout(resolve, 1_000));
+    expect(true).toBeTruthy();
+  });
 });
