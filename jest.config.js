@@ -1,5 +1,6 @@
 /** @type {import('jest').Config} */
 const config = {
+  reporters: ['jest-junit', 'default'],
   transform: {
     '^.+\\.(t|j)sx?$': '@swc/jest',
   },
